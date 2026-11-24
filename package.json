@@ -1,0 +1,45 @@
+{
+  "name": "@meshfrontlab/prompt-lint",
+  "version": "0.1.0",
+  "description": "Lint prompt, skill and agent instruction files (SKILL.md, CLAUDE.md, AGENTS.md, *.prompt.md): pasted secrets, broken {{variables}}, dead links, bloated context.",
+  "type": "module",
+  "bin": {
+    "prompt-lint": "bin/prompt-lint.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "prompt",
+    "prompt-engineering",
+    "lint",
+    "linter",
+    "llm",
+    "ai",
+    "skills",
+    "claude",
+    "agents",
+    "markdown"
+  ],
+  "author": "MESHFRONT LTD",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeshFrontLab/prompt-lint.git"
+  },
+  "homepage": "https://github.com/MeshFrontLab/prompt-lint#readme",
+  "bugs": "https://github.com/MeshFrontLab/prompt-lint/issues"
+}
