@@ -15,13 +15,20 @@ Requires [Node.js](https://nodejs.org) 22 or newer.
 
 ```sh
 # run once, without installing
-npx github:MeshFrontLab/prompt-lint
+npx --allow-git=all github:MeshFrontLab/prompt-lint
 
 # or install the `prompt-lint` command globally
-npm install -g github:MeshFrontLab/prompt-lint
+npm install -g --allow-git=all github:MeshFrontLab/prompt-lint
 
 # or add it to a project
-npm install --save-dev github:MeshFrontLab/prompt-lint
+npm install --save-dev --allow-git=all github:MeshFrontLab/prompt-lint
+```
+
+`--allow-git=all` is needed on npm 12 and newer, which blocks installing straight from GitHub unless you allow it. Older npm versions accept it too. Prefer not to use it? Clone and install from the folder instead:
+
+```sh
+git clone https://github.com/MeshFrontLab/prompt-lint
+npm install -g ./prompt-lint
 ```
 
 ## Usage
@@ -83,7 +90,7 @@ prompt-lint --list-rules           # see every rule
 - uses: actions/setup-node@v5
   with:
     node-version: 22
-- run: npx --yes github:MeshFrontLab/prompt-lint
+- run: npx --yes --allow-git=all github:MeshFrontLab/prompt-lint
 ```
 
 ## Rules
